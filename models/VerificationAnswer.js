@@ -16,7 +16,7 @@ const VerificationAnswer = sequelize.define(
     },
 
     section: {
-      type: DataTypes.ENUM("personal_details", "financial_information", "documents"),
+      type: DataTypes.ENUM("personal_details", "professional_work_experience", "financial_information", "documents"),
       allowNull: false,
     },
 
