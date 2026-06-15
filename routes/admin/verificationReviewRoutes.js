@@ -8,6 +8,7 @@ const {
   updateVerificationNotes,
   getVerificationDocumentsForDownload,
   downloadVerificationDocument,
+  downloadVerificationProfilePdf,
 } = require("../../controllers/admin/verificationReviewController");
 
 const adminAuthMiddleware = require("../../middlewares/adminAuthMiddleware");
@@ -25,6 +26,8 @@ router.patch("/:id/approve", approveVerificationSubmission);
 router.patch("/:id/reject", rejectVerificationSubmission);
 
 router.patch("/:id/notes", updateVerificationNotes);
+
+router.get("/:id/profile-pdf", downloadVerificationProfilePdf);
 
 router.get("/:id/download-documents", getVerificationDocumentsForDownload);
 
